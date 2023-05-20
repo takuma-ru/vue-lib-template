@@ -1,0 +1,17 @@
+{
+  "name": "vue-lib-template",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "docs/**",
+    "packages/**"
+  ],
+  "scripts": {
+    "demo": "cd examples/demo && yarn && yarn upgrade && yarn dev",
+    "lib": "yarn workspace lib"
+  },
+  "volta": {
+    "node": "18.16.0",
+    "yarn": "1.22.10"
+  }
+}

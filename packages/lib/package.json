@@ -1,0 +1,53 @@
+{
+  "name": "lib",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/lib.umd.js",
+  "module": "./dist/lib.js",
+  "exports": {
+    ".": {
+      "import": "./dist/lib.js",
+      "require": "./dist/lib.umd.js"
+    }
+  },
+  "types": "./dist/main.d.ts",
+  "files": [
+    "dist",
+    "LICENSE.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly",
+    "preview": "vite preview",
+    "lint": "eslint --fix src/*.{ts,vue} && eslint --fix src/**/*.{ts,vue}",
+    "format": "prettier -w src/*.{ts,vue} && prettier -w src/**/*.{ts,vue}",
+    "fix": "yarn format && yarn lint"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "18.16.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
+    "eslint": "^8.41.0",
+    "eslint-plugin-vue": "^9.13.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.8",
+    "vite-plugin-css-injected-by-js": "^3.1.1",
+    "vite-plugin-dts": "^2.3.0",
+    "vue-tsc": "^1.6.5"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "volta": {
+    "node": "18.16.0",
+    "yarn": "1.22.19"
+  }
+}
