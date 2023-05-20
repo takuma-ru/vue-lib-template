@@ -7,8 +7,9 @@
     "packages/**"
   ],
   "scripts": {
+    "lib": "yarn workspace lib",
     "demo": "cd examples/demo && yarn && yarn upgrade && yarn dev",
-    "lib": "yarn workspace lib"
+    "publish:lib": "yarn lib publish"
   },
   "volta": {
     "node": "18.16.0",

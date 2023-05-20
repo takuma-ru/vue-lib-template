@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { lib } from "lib";
+import { Lib } from 'lib'
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import { lib } from "lib";
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <lib msg="Vite + Vue3 + " />
+  <Lib msg="Vite + Vue3 + " />
 </template>
 
 <style scoped>
