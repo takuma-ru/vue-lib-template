@@ -1,0 +1,67 @@
+name: release npm package
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - packages/**
+
+jobs:
+  auto-release:
+    runs-on: ubuntu-latest
+
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      USER_EMAIL: ${{ secrets.USER_EMAIL }}
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Set releaser settings
+        run: |
+          git config --global user.name github-action
+          git config --global user.email ${USER_EMAIL}
+
+      - name: Set .npmrc
+        run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
+
+      - name: Create release branch
+        id: create_branch
+        run: |
+          git checkout -b release
+          git push --set-upstream origin release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Major release
+        id: major
+        run: npx -w packages/lib release-it@15.10.3 -- major --ci
+        if: contains(toJSON(github.event.commits.*.message), '🚀 bump up version major')
+
+      - name: Minor release
+        id: minor
+        run: npx -w packages/lib release-it@15.10.3 -- minor --ci
+        if: steps.major.conclusion == 'skipped' && contains(toJSON(github.event.commits.*.message), '🚀 bump up version minor')
+
+      - name: Patch release
+        id: patch
+        run: npx -w packages/lib release-it@15.10.3 -- patch --ci
+        if: steps.minor.conclusion == 'skipped' && contains(toJSON(github.event.commits.*.message), '🚀 bump up version patch')
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        if: contains(toJSON(github.event.commits.*.message), '🚀 bump up version major') || contains(toJSON(github.event.commits.*.message), '🚀 bump up version minor') || contains(toJSON(github.event.commits.*.message), '🚀 bump up version patch')
+        with:
+          title: "Update package.json"
+          draft: false
+          base: main
+          branch: release
+          assignees: "${{ github.actor }}"

@@ -6,9 +6,14 @@
 
 ## Description
 
-UI Library development templates for vue2, vue3, nuxt2, nuxt3 using `vue-demi`
+Monorepo project template for developing vue3.x compatible libraries.<br>
+Pre-setup project for behavior validation and documentation.
 
 ## Features
+
+> :heavy_check_mark: = Available<br>
+> :construction: = Work in progress<br>
+> :calendar: = Planned<br>
 
 ## Dependencies / DevDependencies
 
@@ -40,7 +45,7 @@ UI Library development templates for vue2, vue3, nuxt2, nuxt3 using `vue-demi`
 | ------------ | ------- | ------- |
 |              |         |         |
 
-## Getting Started
+## Installation
 
 #### 0. Click to "Use this template"
 
@@ -56,19 +61,50 @@ We use volta to manage node and yarn versioning.
 yarn
 ```
 
-#### 3. Build Library
+## Development
+
+#### 1. Build Library
 
 ```bash
 yarn build:lib
 ```
 
-#### 4. Operation check
+#### 2. Operation check
 
 You can run the vite+vue3 project created in examples/demo to check the operation of the built package.
 
 ```bash
 yarn dev:demo
 ```
+
+## How to Release package
+
+#### 1. Set Github Secret
+
+1. Create a new npm access token. [Document](https://docs.npmjs.com/creating-and-viewing-access-tokens)
+2. Set the token to the `NPM_TOKEN` secret in the repository settings. [Document](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
+3. Set the token to the `USER_EMAIL` secret in the repository settings. This token is used to set the author of the commit.
+
+#### 3. Push
+
+Without thinking, check out the branch and get to work.<br>
+(Don't work on the main branch!)
+
+#### 4. Create Pull Request
+
+Once the implementation is complete, create a pull request.
+
+#### 5. Merge Pull Request
+
+Once the review is complete, merge.<br>
+Merge comments should be changed manually.<br>
+
+> - major update: 🚀 bump up version major
+> - minor update: 🚀 bump up version minor
+> - patch update: 🚀 bump up version patch
+>   Once merged, `release-it` CI is automatically executed.<br>
+>   a few moments later....<br>
+>   The package should be released to npm!<br>
 
 ## Deploy Service
 
