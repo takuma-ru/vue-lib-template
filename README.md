@@ -102,9 +102,10 @@ Merge comments should be changed manually.<br>
 > - major update: 🚀 bump up version major
 > - minor update: 🚀 bump up version minor
 > - patch update: 🚀 bump up version patch
->   Once merged, `release-it` CI is automatically executed.<br>
->   a few moments later....<br>
->   The package should be released to npm!<br>
+
+Once merged, `release-it` CI is automatically executed.<br>
+a few moments later....<br>
+The package should be released to npm!<br>
 
 ## Deploy Service
 
