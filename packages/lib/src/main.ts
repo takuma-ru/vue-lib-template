@@ -1,2 +1,2 @@
-import { Lib, Test } from './components'
-export { Lib, Test }
+import { Lib } from './components'
+export { Lib }
