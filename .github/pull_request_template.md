@@ -8,7 +8,7 @@
     - add or update docs: :memo: title
     - other: title
 
-  # Merge commmit message
+  # Merge commit message
     - major update: 🚀 bump up version major
     - minor update: 🚀 bump up version minor
     - patch update: 🚀 bump up version patch
