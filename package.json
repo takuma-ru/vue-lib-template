@@ -8,6 +8,8 @@
   ],
   "scripts": {
     "lib": "yarn workspace lib",
+    "docs": "yarn workspace docs",
+    "dev:docs": "yarn docs dev",
     "dev:demo": "cd examples/demo && yarn && yarn upgrade && yarn dev",
     "build:lib": "yarn lib build",
     "publish:lib": "yarn lib publish"
