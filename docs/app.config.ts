@@ -1,6 +1,6 @@
 import { IAppConfig } from "@takuma-ru/vue-library-docs/types/app.config";
 
-export default defineAppConfig<IAppConfig>({
+const vueLibraryDocsConfig: IAppConfig = {
   docs: {
     libName: "vue-library-docs",
     developerName: "takuma-ru",
@@ -26,4 +26,6 @@ export default defineAppConfig<IAppConfig>({
       medium: "",
     },
   },
-});
+};
+
+export default defineAppConfig({ ...vueLibraryDocsConfig });

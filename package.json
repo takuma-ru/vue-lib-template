@@ -2,15 +2,23 @@
   "name": "vue-lib-template",
   "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "docs/**",
-    "packages/**"
-  ],
+  "workspaces": {
+    "packages": [
+      "docs/**",
+      "packages/**",
+      "examples/*"
+    ],
+    "nohoist": [
+      "**/demo",
+      "**/demo/**"
+    ]
+  },
   "scripts": {
     "lib": "yarn workspace lib",
     "docs": "yarn workspace docs",
+    "demo": "yarn workspace demo",
     "dev:docs": "yarn docs dev",
-    "dev:demo": "cd examples/demo && yarn && yarn upgrade && yarn dev",
+    "dev:demo": "yarn demo dev",
     "build:lib": "yarn lib build",
     "publish:lib": "yarn lib publish"
   },

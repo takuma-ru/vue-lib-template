@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "name": "root:vue-lib-template",
+      "path": "."
+    },
+    {
+      "name": "📄 docs",
+      "path": "docs"
+    },
+    {
+      "name": "📺 demo",
+      "path": "examples/demo"
+    },
+    {
+      "name": "📦 lib",
+      "path": "packages/lib"
+    }
+  ],
+  "settings": {}
+}
