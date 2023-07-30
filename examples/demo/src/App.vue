@@ -3,7 +3,7 @@ import { Lib } from 'lib'
 </script>
 
 <template>
-  <Lib msg="Vite + Vue3 + " />
+  <Lib msg="Vite + Vue3" />
 </template>
 
 <style scoped>

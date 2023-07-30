@@ -29,7 +29,7 @@ export default defineConfig({
     cssCodeSplit: true,
     // minify: true,
     lib: {
-      entry: path.resolve(__dirname, 'src/main.ts'),
+      entry: path.resolve(__dirname, 'src/main.build.ts'),
       name: 'lib', // 🐈
       fileName: 'lib', // 🐈
       formats: ['es', 'cjs', 'umd'],

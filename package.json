@@ -17,9 +17,13 @@
     "lib": "yarn workspace lib",
     "docs": "yarn workspace docs",
     "demo": "yarn workspace demo",
+
     "dev:docs": "yarn docs dev",
-    "dev:demo": "yarn demo dev",
+    "dev:demo": "yarn install --check-files && yarn demo dev",
+    "dev:lib": "yarn lib dev",
+
     "build:lib": "yarn lib build",
+
     "publish:lib": "yarn lib publish"
   },
   "volta": {
