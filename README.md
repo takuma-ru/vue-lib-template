@@ -11,6 +11,15 @@ Pre-setup project for behavior validation and documentation.
 
 ## Features
 
+:heavy_check_mark: Library development based on .vue files<br>
+:heavy_check_mark: Pre-built build configuration<br>
+:heavy_check_mark: Publish flow to pre-built npm (by release-it)<br>
+:heavy_check_mark: Prebuilt eslint, prettier, stylint configurations<br>
+:heavy_check_mark: Pre-built verification environment<br>
+:heavy_check_mark: Pre-built documentation projects<br>
+:construction: Revamped document page UI
+:calendar: Construction of nuxt3 verification environment<br>
+
 > :heavy_check_mark: = Available<br>
 > :construction: = Work in progress<br>
 > :calendar: = Planned<br>
@@ -19,16 +28,17 @@ Pre-setup project for behavior validation and documentation.
 
 ### packages/lib
 
-| package name                   | version | remarks |
-| ------------------------------ | ------- | ------- |
-| vue                            | ^3.3.4  |         |
-| typescript                     | ^5.0.2  |         |
-| vite                           | ^4.3.8  |         |
-| rollup-plugin-typescript2      | ^0.34.1 |         |
-| vite-plugin-css-injected-by-js | ^3.1.1  |         |
-| eslint                         | ^8.41.0 |         |
-| prettier                       | ^2.8.8  |         |
-|                                |         |         |
+| package name                   | version  | remarks                                                                                                                    |
+| ------------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------- |
+| vue                            | ^3.3.4   |                                                                                                                            |
+| sass                           | ^1.62.1  |                                                                                                                            |
+| typescript                     | ^5.0.2   |                                                                                                                            |
+| vite                           | ^4.3.8   |                                                                                                                            |
+| rollup-plugin-typescript2      | ^0.34.1  |                                                                                                                            |
+| vite-plugin-css-injected-by-js | ^3.1.1   |                                                                                                                            |
+| eslint                         | ^8.41.0  | https://github.com/takuma-ru/vue-lib-template/blob/3053251a8207f6cfa9ca782e9ef8ec0be01cd8f9/packages/lib/.eslintrc.yml     |
+| prettier                       | ^3.0.0   | https://github.com/takuma-ru/vue-lib-template/blob/3053251a8207f6cfa9ca782e9ef8ec0be01cd8f9/packages/lib/.prettierrc.yml   |
+| stylelint                      | ^15.10.1 | https://github.com/takuma-ru/vue-lib-template/blob/3053251a8207f6cfa9ca782e9ef8ec0be01cd8f9/packages/lib/.stylelintrc.json |
 
 ### examples/demo
 
@@ -41,9 +51,10 @@ Pre-setup project for behavior validation and documentation.
 
 ### docs
 
-| package name | version | remarks |
-| ------------ | ------- | ------- |
-|              |         |         |
+| package name                | version | remarks |
+| --------------------------- | ------- | ------- |
+| nuxt                        | ^3.5.1  |         |
+| @takuma-ru/vue-library-docs | ^1.3.0  |         |
 
 ## Installation
 
