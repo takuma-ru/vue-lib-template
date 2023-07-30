@@ -11,13 +11,20 @@ Pre-setup project for behavior validation and documentation.
 
 ## Features
 
-:heavy_check_mark: Library development based on .vue files<br>
-:heavy_check_mark: Pre-built build configuration<br>
-:heavy_check_mark: Publish flow to pre-built npm (by release-it)<br>
-:heavy_check_mark: Prebuilt eslint, prettier, stylint configurations<br>
-:heavy_check_mark: Pre-built verification environment<br>
-:heavy_check_mark: Pre-built documentation projects<br>
+✔️ Library development based on .vue files
+
+:heavy_check_mark: Pre-built build configuration
+
+:heavy_check_mark: Publish flow to pre-built npm (by release-it)
+
+:heavy_check_mark: Prebuilt eslint, prettier, stylint configurations
+
+:heavy_check_mark: Pre-built verification environment
+
+:heavy_check_mark: Pre-built documentation projects
+
 :construction: Revamped document page UI
+
 :calendar: Construction of nuxt3 verification environment<br>
 
 > :heavy_check_mark: = Available<br>
