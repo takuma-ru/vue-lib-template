@@ -81,13 +81,19 @@ yarn
 
 ## Development
 
-#### 1. Build Library
+#### 1. Library Development
+
+```bash
+yarn dev:lib
+```
+
+#### 2. Build Library
 
 ```bash
 yarn build:lib
 ```
 
-#### 2. Operation check
+#### 3. Operation check
 
 You can run the vite+vue3 project created in examples/demo to check the operation of the built package.
 
