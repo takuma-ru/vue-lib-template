@@ -9,7 +9,7 @@
 Monorepo project template for developing vue3.x compatible libraries.<br>
 Pre-setup project for behavior validation and documentation.
 
-## Features
+## :package: Features
 
 ✔️ Library development based on .vue files
 
@@ -25,13 +25,15 @@ Pre-setup project for behavior validation and documentation.
 
 :construction: Revamped document page UI
 
-:calendar: Construction of nuxt3 verification environment<br>
+:calendar: Construction of nuxt3 verification environment
+
+:calendar: Establishment of test environment
 
 > :heavy_check_mark: = Available<br>
 > :construction: = Work in progress<br>
 > :calendar: = Planned<br>
 
-## Dependencies / DevDependencies
+## :pushpin: Dependencies / DevDependencies
 
 ### packages/lib
 
@@ -63,7 +65,7 @@ Pre-setup project for behavior validation and documentation.
 | nuxt                        | ^3.5.1  |         |
 | @takuma-ru/vue-library-docs | ^1.3.0  |         |
 
-## Installation
+## :tada: Installation
 
 #### 0. Click to "Use this template"
 
@@ -79,7 +81,7 @@ We use volta to manage node and yarn versioning.
 yarn
 ```
 
-## Development
+## :hammer: Development
 
 #### 1. Library Development
 
@@ -101,7 +103,7 @@ You can run the vite+vue3 project created in examples/demo to check the operatio
 yarn dev:demo
 ```
 
-## How to Release package
+## :rocket: How to Release package
 
 #### 1. Set Github Secret
 
